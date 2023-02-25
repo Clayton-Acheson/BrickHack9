@@ -17,7 +17,8 @@ public class TestArea extends JLabel {
     public TestArea(Color color) {
         setBackground(color);
         setOpaque(true);
-        setBorder(BorderFactory.createLineBorder(Color.black));
+        setBorder(BorderFactory.createEmptyBorder());
+        
     }
  
     public Dimension getMinimumSize() {

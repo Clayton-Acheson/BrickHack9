@@ -14,8 +14,15 @@ public class Panel extends JFrame {
     public Panel() {
         super("Virus Fighter 199X");
 
+<<<<<<< Updated upstream
 
         setSize(width, height - (height/20));
+=======
+    public Panel(int rows, int columns) {
+        super("Game Name Pending");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(width, height);
+>>>>>>> Stashed changes
         setLocationRelativeTo(null);
 
         JPanel titlePanel = new JPanel();
@@ -29,9 +36,13 @@ public class Panel extends JFrame {
             for (int j = 0; j < columns; j++) {
                 adPanel.add(GUI.createButton("ad placeholder"));
             }
+<<<<<<< Updated upstream
         } */
 
         titlePanel.add(GUI.createLabel("Virus Fighter 19XX"), BorderLayout.CENTER);
+=======
+        }
+>>>>>>> Stashed changes
         adPanel.setBackground(Color.BLACK);
         titlePanel.setBackground(Color.GRAY);
 
