@@ -11,8 +11,11 @@ import javax.swing.*;
 
 public class GUI {
 
-    public static String font = "Arial";
-    public static int fontMedium = 16;
+    public static String font = "Impact Bold";
+    public static String fontLevels = "Impact";
+    public static int fontSmall = 16;
+    public static int teenytinyFont = 8;
+    public static int fontLarge = 72;
     public static Color backgroundColor = Color.WHITE;
     public static Color foregroundColor = Color.BLACK;
     public static Color buttonColor = Color.LIGHT_GRAY;
@@ -21,28 +24,29 @@ public class GUI {
     public static Color buttonHoverTextColor = Color.WHITE;
     public static Color buttonPressedColor = Color.DARK_GRAY;
     public static Color buttonPressedTextColor = Color.WHITE;
-    public static Font labelFont = new Font(font, Font.PLAIN, fontMedium);
+    public static Font buttonFont = new Font(font, Font.PLAIN, fontSmall);
+    public static Font levelFont = new Font(fontLevels, Font.PLAIN, teenytinyFont);
+    public static Font titleFont = new Font(font, Font.BOLD, fontLarge);
 
     public static JLabel createLabel(String text) {
         JLabel label = new JLabel(text);
-        label.setFont(labelFont);
+        label.setFont(titleFont);
         label.setBackground(backgroundColor);
         label.setForeground(foregroundColor);
         return label;
     }
 
-    public static JTextArea createTextArea(String text) {
-        JTextArea textArea = new JTextArea(text);
-        textArea.setFont(labelFont);
-        textArea.setBackground(backgroundColor);
-        textArea.setForeground(foregroundColor);
-        textArea.setEditable(false);
-        return textArea;
+    public static JTextField createTextField(String text) {
+        JTextField textField = new JTextField(text);
+        textField.setFont(levelFont);
+        textField.setBackground(Color.GRAY);
+        textField.setEditable(false);
+        return textField;
     }
 
     public static JButton createButton(String text) {
         JButton button = new JButton(text);
-        button.setFont(labelFont);
+        button.setFont(buttonFont);
         button.setForeground(buttonTextColor);
         button.setBackground(buttonColor);
         button.setOpaque(true);
