@@ -128,90 +128,109 @@ public class PopUp extends JFrame {
     public PopUp (String warning, String optionA, String optionB){
         super("Error Testing");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(500,200);
+        setSize(475,150);
         setLayout(new GridBagLayout());
+        setUndecorated(true);
         
         b1 = new TestArea(Color.BLUE, " ");
+        b1.setSize(50,50);
         gbc.gridx = 0;
         gbc.gridy = 0;
-        gbc.fill = GridBagConstraints.BOTH;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         add(b1,gbc);
         
         b2 = new TestArea(Color.BLUE, " ");
+        b2.setSize(50,50);
         gbc.gridx = 1;
         gbc.gridy = 0;
-        gbc.fill = GridBagConstraints.BOTH;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         add(b2, gbc);
 
         b3 = new TestArea(Color.BLUE, " ");
+        b3.setSize(50,50);
         gbc.gridx = 2;
         gbc.gridy = 0;
-        gbc.fill = GridBagConstraints.BOTH;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         add(b3, gbc);
 
         b4 = new TestArea(Color.BLUE, " ");
+        b4.setSize(50,50);
         gbc.gridx = 3;
         gbc.gridy = 0;
-        gbc.fill = GridBagConstraints.BOTH;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
         add(b4, gbc);
 
         add(createClose(gbc),gbc);
 
         m1 = new TestArea(Tan, " ");
+        m1.setSize(12,150);
         gbc.gridx = 0;
         gbc.gridy = 1;
-        //m1.SetSize(12,50);
+        gbc.weighty = 10;
         add(m1, gbc);
 
         m2 = new TestArea(Tan, " ");
+        m2.setSize(12,150);
         gbc.gridx = 1; 
         gbc.gridy = 1;
-        //m2.SetSize(12,50);
+        gbc.weighty = 10;
         add(m2, gbc);
 
         m3 = new TestArea(Tan, warning);
+        m3.setSize(152,150);
         gbc.gridx = 2;
         gbc.gridy = 1;
-        //m3.SetSize(152,50);
+        gbc.weightx = 10;
+        gbc.weighty = 10;
         add(m3, gbc);
 
         m4 = new TestArea(Tan, " ");
+        m4.setSize(12,150);
         gbc.gridx = 3;
         gbc.gridy = 1;
+        gbc.weighty = 10;
         //m4.SetSize(12,50);
         add(m4, gbc);
 
         m5 = new TestArea(Tan, " ");
+        m5.setSize(12,150);
         gbc.gridx = 4;
         gbc.gridy = 1;
+        gbc.weighty = 10;
         //m5.SetSize(12,50);
         add(m5, gbc);
         
         //add(CreateMsg(warningText),gbc);
         
         t1 = new TestArea(Tan, " ");
+        t1.setSize(50,150);
         gbc.gridx = 0;
         gbc.gridy = 3;
+        gbc.weighty = 10;
         add(t1, gbc);
     
         add(CreateOp1(optionA,gbc),gbc);
         
         t2 = new TestArea(Tan, " ");
+        t2.setSize(50,150);
         gbc.gridx = 2;
         gbc.gridy = 3;
+        gbc.weighty = 10;
         add(t2, gbc);
 
         add(CreateOp2(optionB, gbc),gbc);
 
         t3 = new TestArea(Tan, " ");
+        t3.setSize(50,150);
         gbc.gridx = 4;
         gbc.gridy = 3;
+        gbc.weighty = 10;
         add(t3, gbc);
 
         setVisible(true);
     }
 
     public static void main(String[] args) {
-     new PopUp("You dun fucked up", "Suffer", "Cope");
+     new PopUp("Big Oopsie Detected: clean up at aisle 4", "Suffer", "Cope");
     }
 }
