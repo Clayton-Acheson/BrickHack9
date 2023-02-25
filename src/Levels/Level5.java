@@ -12,6 +12,7 @@ import java.awt.*;
 public class Level5 {
 
     private boolean levelComplete = false;
+    private boolean levelFailed = false;
     private final int levelNumber = 5;
 
     public JPanel createLevel5() {
@@ -23,5 +24,9 @@ public class Level5 {
 
     public void levelComplete() {
         levelComplete = true;
+    }
+
+    public void levelFailed() {
+        levelFailed = true;
     }
 }

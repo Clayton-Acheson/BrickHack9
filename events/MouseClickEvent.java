@@ -1,4 +1,4 @@
--/*
+/*
  * Handles Mouse Events for the game
  * Authors : @cgr9496 , @Clayton-Acheson
  */
