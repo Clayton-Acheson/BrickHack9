@@ -1,11 +1,15 @@
 /**
  * @(#)Panel.java
+ * Creates the main panel for the game. This is the panel that will hold all the other panels
  * author: Christian Rockwell
  */
+
+package Windows;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.GridLayout;
+import Levels.*;
 
 public class Panel extends JFrame {
     private final Dimension screensize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -13,7 +17,6 @@ public class Panel extends JFrame {
 
     public Panel() {
         super("Virus Fighter 199X");
-
 
         setSize(width, height - (height/20));
         setLocationRelativeTo(null);
@@ -29,16 +32,16 @@ public class Panel extends JFrame {
         cardPanel.add(GUI.createButton("Card 2"), "Card 2");
 
 
-        titlePanel.add(GUI.createLabel("Virus Fighter 19XX"), BorderLayout.CENTER);
-        cardPanel.setBackground(Color.BLACK);
-        titlePanel.setBackground(Color.GRAY);
+        titlePanel.add(GUI.createLabel(" Virus Fighter 19XX"), BorderLayout.CENTER);
+        titlePanel.setBackground(new Color(75, 97, 209));
 
         JPanel levelPanel = new JPanel();
+        levelPanel.setBackground(new Color(75, 97, 209));
         levelPanel.setLayout(new GridLayout(11, 1));
         JTextField[] levelFields = new JTextField[10];
-        levelPanel.add(GUI.createLabel("Levels: "));
+        levelPanel.add(GUI.createLevelLabel("   Levels: "));
         for (int i = 0; i < 10; i++) {
-            levelFields[i] = GUI.createTextField(String.valueOf((i + 1)));
+            levelFields[i] = GUI.createTextField("                                         " + String.valueOf((i + 1)));
             levelFields[i].setEditable(false);
             levelPanel.add(levelFields[i]);
         }

@@ -1,9 +1,10 @@
 /**
  * @(#)GUI.java
  * author: Christian Rockwell
- *
- * This class is the main GUI class. It contains the main method.
+ * This class is the main Windows.GUI class. It contains all the methods for creating the Windows.GUI elements.
  */
+
+package Windows;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -14,7 +15,7 @@ public class GUI {
     public static String font = "Impact Bold";
     public static String fontLevels = "Impact";
     public static int fontSmall = 16;
-    public static int teenytinyFont = 8;
+    public static int subheaderSize = 32;
     public static int fontLarge = 72;
     public static Color backgroundColor = Color.WHITE;
     public static Color foregroundColor = Color.BLACK;
@@ -25,21 +26,28 @@ public class GUI {
     public static Color buttonPressedColor = Color.DARK_GRAY;
     public static Color buttonPressedTextColor = Color.WHITE;
     public static Font buttonFont = new Font(font, Font.PLAIN, fontSmall);
-    public static Font levelFont = new Font(fontLevels, Font.PLAIN, teenytinyFont);
+    public static Font levelFont = new Font(fontLevels, Font.PLAIN, fontSmall);
     public static Font titleFont = new Font(font, Font.BOLD, fontLarge);
+    public static Font subheaderFont = new Font(font, Font.BOLD, subheaderSize);
 
     public static JLabel createLabel(String text) {
         JLabel label = new JLabel(text);
         label.setFont(titleFont);
-        label.setBackground(backgroundColor);
-        label.setForeground(foregroundColor);
+        label.setForeground(Color.WHITE);
+        return label;
+    }
+
+    public static JLabel createLevelLabel(String text) {
+        JLabel label = new JLabel(text);
+        label.setFont(subheaderFont);
+        label.setForeground(Color.WHITE);
         return label;
     }
 
     public static JTextField createTextField(String text) {
         JTextField textField = new JTextField(text);
         textField.setFont(levelFont);
-        textField.setBackground(Color.GRAY);
+        textField.setBackground(Color.LIGHT_GRAY);
         textField.setEditable(false);
         return textField;
     }
