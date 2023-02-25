@@ -131,24 +131,28 @@ public class PopUp extends JFrame {
         setSize(500,200);
         setLayout(new GridBagLayout());
         
-        b1 = new TestArea(Color.BLUE, "Bitches");
+        b1 = new TestArea(Color.BLUE, " ");
         gbc.gridx = 0;
         gbc.gridy = 0;
+        gbc.fill = GridBagConstraints.BOTH;
         add(b1,gbc);
         
         b2 = new TestArea(Color.BLUE, " ");
         gbc.gridx = 1;
         gbc.gridy = 0;
+        gbc.fill = GridBagConstraints.BOTH;
         add(b2, gbc);
 
         b3 = new TestArea(Color.BLUE, " ");
         gbc.gridx = 2;
         gbc.gridy = 0;
+        gbc.fill = GridBagConstraints.BOTH;
         add(b3, gbc);
 
         b4 = new TestArea(Color.BLUE, " ");
         gbc.gridx = 3;
         gbc.gridy = 0;
+        gbc.fill = GridBagConstraints.BOTH;
         add(b4, gbc);
 
         add(createClose(gbc),gbc);
@@ -156,26 +160,31 @@ public class PopUp extends JFrame {
         m1 = new TestArea(Tan, " ");
         gbc.gridx = 0;
         gbc.gridy = 1;
+        //m1.SetSize(12,50);
         add(m1, gbc);
 
-        m2 = new TestArea(Tan, "    ");
+        m2 = new TestArea(Tan, " ");
         gbc.gridx = 1; 
         gbc.gridy = 1;
+        //m2.SetSize(12,50);
         add(m2, gbc);
 
         m3 = new TestArea(Tan, warning);
         gbc.gridx = 2;
         gbc.gridy = 1;
+        //m3.SetSize(152,50);
         add(m3, gbc);
 
         m4 = new TestArea(Tan, " ");
         gbc.gridx = 3;
         gbc.gridy = 1;
+        //m4.SetSize(12,50);
         add(m4, gbc);
 
         m5 = new TestArea(Tan, " ");
         gbc.gridx = 4;
         gbc.gridy = 1;
+        //m5.SetSize(12,50);
         add(m5, gbc);
         
         //add(CreateMsg(warningText),gbc);
