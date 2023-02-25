@@ -14,10 +14,17 @@ import java.awt.Graphics;
 public class TestArea extends JLabel {
     Dimension minSize = new Dimension(100, 50);
  
-    public TestArea(Color color) {
+    public TestArea(Color color, String text) {
         setBackground(color);
         setOpaque(true);
         setBorder(BorderFactory.createEmptyBorder());
+        setText(text);
+        if(!text.equals(" ")){
+            setSize(150,50);
+        }
+        else{
+            setSize(11, 50);
+        }
         
     }
  
