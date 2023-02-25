@@ -5,7 +5,7 @@
  *    MouseEventDemo.java.
  *    MouseMotionEventDemo.java
  */
-package events;
+
 import javax.swing.*;
 import java.awt.Dimension;
 import java.awt.Color;

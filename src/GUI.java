@@ -7,8 +7,7 @@
 
 import java.awt.Color;
 import java.awt.Font;
-import javax.swing.JButton;
-import javax.swing.JLabel;
+import javax.swing.*;
 
 public class GUI {
 
@@ -30,6 +29,15 @@ public class GUI {
         label.setBackground(backgroundColor);
         label.setForeground(foregroundColor);
         return label;
+    }
+
+    public static JTextArea createTextArea(String text) {
+        JTextArea textArea = new JTextArea(text);
+        textArea.setFont(labelFont);
+        textArea.setBackground(backgroundColor);
+        textArea.setForeground(foregroundColor);
+        textArea.setEditable(false);
+        return textArea;
     }
 
     public static JButton createButton(String text) {
