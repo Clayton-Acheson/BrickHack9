@@ -54,11 +54,13 @@ public class PopUp extends JFrame {
         return Close;
     }
 
-    public JTextField createWarning(String warningText, GridBagConstraints gbc){
+    public JTextField createWarning(String warningText){
         JTextField Warning = new JTextField(warningText);
-        gbc.gridx = 0;
-        gbc.gridy = 1;
+        gbc.gridx = 1;
+        gbc.gridy = 2;
         gbc.gridwidth = 5;
+        gbc.weightx(1);
+        
             Warning.setForeground(Color.BLACK);
             Warning.setBackground(Tan);
             Warning.setVisible(true);
@@ -68,7 +70,7 @@ public class PopUp extends JFrame {
     public JButton CreateOp1(GridBagConstraints gbc){
         JButton Op1 = new JButton("Option 1");
         gbc.gridx = 1;
-        gbc.gridy = 2;
+        gbc.gridy = 3;
         Op1.setForeground(Color.BLACK);
         Op1.setBackground(Tan);
         Op1.setOpaque(true);
@@ -93,7 +95,7 @@ public class PopUp extends JFrame {
     public JButton CreateOp2(GridBagConstraints gbc){
         JButton Op2 = new JButton("Option 2");
         gbc.gridx = 3;
-        gbc.gridy = 2;
+        gbc.gridy = 3;
         Op2.setForeground(Color.BLACK);
         Op2.setBackground(Tan);
         Op2.setOpaque(true);
@@ -119,6 +121,9 @@ public class PopUp extends JFrame {
     
 
     public PopUp (String warningText){
+        super("Error Testing");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(300,120);
         setLayout(new GridBagLayout());
         
         b1 = new TestArea(Color.BLUE);
@@ -137,37 +142,31 @@ public class PopUp extends JFrame {
         add(b3, gbc);
 
         add(createClose(gbc),gbc);
-        add(createWarning("You clicked on the wrong thing me boyo",gbc));
+        add(createWarning(warningText),gbc);
         
         t1 = new TestArea(Tan);
         gbc.gridx = 0;
-        gbc.gridy = 2;
+        gbc.gridy = 3;
         add(t1, gbc);
     
         add(CreateOp1(gbc),gbc);
         
         t2 = new TestArea(Tan);
         gbc.gridx = 2;
-        gbc.gridy = 2;
+        gbc.gridy = 3;
         add(t2, gbc);
 
         add(CreateOp2(gbc),gbc);
         
         t3 = new TestArea(Tan);
         gbc.gridx = 4;
-        gbc.gridy = 2;
+        gbc.gridy = 3;
         add(t3, gbc);
 
         setVisible(true);
     }
 
     public static void main(String[] args) {
-    PopUp P = new PopUp("You dun fucked up");
-    JFrame jf = new JFrame();
-    jf.setTitle("POPUP BITCHES");
-    jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    jf.setSize(300,120);
-    jf.setVisible(true);
-    jf.add(P);
+     new PopUp("You dun fucked up");
     }
 }
