@@ -20,12 +20,11 @@ public class Level2 {
     private final int screenHeight = 869;
     JPanel Intro = Introduction();
 
-    public JPanel createLevel2() {
+    public Level2() {
         JPanel level2 = new JPanel();
         level2.add(Intro);
         Intro.setOpaque(true);
         Intro.setVisible(true);
-        return level2;
     }
 
     public JPanel Introduction(){
