@@ -24,6 +24,15 @@ public class Level2 {
         return level2;
     }
 
+    public JPanel Introduction(){
+        JPanel Intro = new JPanel();
+        Intro.setSize(475,150);
+        Intro.setLayout(new GridBagLayout());
+        
+
+        return Intro;
+    }
+
     public void levelComplete() {
         levelComplete = true;
     }
