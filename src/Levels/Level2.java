@@ -36,12 +36,12 @@ public class Level2 {
         TestArea Title = new TestArea(new Color(142,184,212), "Level 2");
         Title.setFont(new Font("Impact",Font.PLAIN, 120));
         Title.setSize(screenWidth,(screenHeight/4));
-        Intro.add(Title, BorderLayout.CENTER);
+        Intro.add(Title);
        
         TestArea Desc = new TestArea(new Color(142,184,212), "Be careful when closing your tabs");
-        Desc.setFont(new Font("Impact",Font.PLAIN, 45));
+        Desc.setFont(new Font("Impact",Font.PLAIN, 40));
         Desc.setSize(screenWidth,(screenHeight/4));
-        Intro.add(Desc, BorderLayout.CENTER);
+        Intro.add(Desc);
         
         TestArea Fill1 = new TestArea(new Color(142,184,212), " ");
         Fill1.setSize(screenWidth,(screenHeight/4));
