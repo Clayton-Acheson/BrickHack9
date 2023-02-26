@@ -24,6 +24,7 @@ public class Level2 {
         JPanel level2 = new JPanel();
         level2.add(Intro);
         Intro.setOpaque(true);
+        Intro.setLocation(screenWidth/2,screenHeight);
         Intro.setVisible(true);
     }
 
