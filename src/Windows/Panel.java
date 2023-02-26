@@ -9,6 +9,11 @@ package Windows;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import Levels.*;
+import Windows.Temporary;
 import Levels.*;
 
 public class Panel extends JFrame {
@@ -28,12 +33,29 @@ public class Panel extends JFrame {
         JPanel cardPanel = new JPanel();
         CardLayout cardLayout = new CardLayout();
         cardPanel.setLayout(cardLayout);
-        cardPanel.add(GUI.createButton("Card 1"), "Card 1");
-        cardPanel.add(GUI.createButton("Card 2"), "Card 2");
-
-
+        cardPanel.add(GUI.createButton("swag"), "swag");
+        cardPanel.add(new Temporary(), "XP.jpg");
         titlePanel.add(GUI.createLabel(" Virus Fighter 19XX"), BorderLayout.CENTER);
         titlePanel.setBackground(new Color(75, 97, 209));
+
+        JButton levelButtons = new JButton("pass");
+
+        System.out.println(width);
+        System.out.println(height);
+
+        levelButtons.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                cardLayout.next(cardPanel);
+                System.out.println(cardPanel.getSize());
+                System.out.println(cardPanel.getHeight());
+                System.out.println(cardPanel.getWidth());
+            }
+        });
+
+        titlePanel.add(levelButtons, BorderLayout.SOUTH);
+
+
+
 
         JPanel levelPanel = new JPanel();
         levelPanel.setBackground(new Color(75, 97, 209));
