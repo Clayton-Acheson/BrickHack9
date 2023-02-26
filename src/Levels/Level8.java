@@ -10,7 +10,7 @@ import javax.swing.*;
 import java.awt.*;
 import Events.TestArea;
 
-public class Level8 {
+public class Level8 extends JPanel{
     private boolean levelComplete = false;
     private boolean levelFailed = false;
     private final int levelNumber = 8;
@@ -20,7 +20,7 @@ public class Level8 {
     public JPanel createLevel8() {
         JPanel level8 = new JPanel();
         level8.add(new JLabel("Level 8: Basic Reaction"), BorderLayout.NORTH);
-        level8.add(new JLabel(""), BorderLayout.CENTER);
+        level8.setVisible(true);
         return level8;
     }
 

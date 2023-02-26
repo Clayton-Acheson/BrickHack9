@@ -6,15 +6,12 @@
 
 package Windows;
 
+import Levels.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import Levels.*;
-import Windows.Temporary;
-import Levels.*;
 
 public class Panel extends JFrame {
     private final Dimension screensize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -33,24 +30,31 @@ public class Panel extends JFrame {
         JPanel cardPanel = new JPanel();
         CardLayout cardLayout = new CardLayout();
         cardPanel.setLayout(cardLayout);
-        cardPanel.add(GUI.createButton("swag"), "swag");
-        cardPanel.add(new Temporary(), "XP.jpg");
-        titlePanel.add(GUI.createLabel(" Virus Fighter 19XX"), BorderLayout.CENTER);
-        titlePanel.setBackground(new Color(75, 97, 209));
-
         JButton levelButtons = new JButton("pass");
-
-        System.out.println(width);
-        System.out.println(height);
-
         levelButtons.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 cardLayout.next(cardPanel);
-                System.out.println(cardPanel.getSize());
-                System.out.println(cardPanel.getHeight());
-                System.out.println(cardPanel.getWidth());
             }
         });
+
+        cardPanel.add(new TitleScreen());
+        cardPanel.add(new Level1());
+        cardPanel.add(new Level2().Introduction());
+        cardPanel.add(new Level3());
+        cardPanel.add(new Level4());
+        cardPanel.add(new Level5());
+        cardPanel.add(new Level6());
+        cardPanel.add(new Level7());
+        cardPanel.add(new Level8());
+        cardPanel.add(new Level9());
+        cardPanel.add(new Level10());
+
+
+        titlePanel.add(GUI.createLabel(" Virus Fighter 19XX"), BorderLayout.CENTER);
+        titlePanel.setBackground(new Color(75, 97, 209));
+
+        System.out.println(width);
+        System.out.println(height);
 
         titlePanel.add(levelButtons, BorderLayout.SOUTH);
 
