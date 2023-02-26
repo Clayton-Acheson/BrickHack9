@@ -12,6 +12,8 @@ import Windows.GUI;
 
 public class TitleScreen {
         private final int levelNumber = 0;
+        private final int screenWidth = 1757;
+    private final int screenHeight = 869;
 
         public JPanel createTitleScreen() {
             JPanel titleScreen = new JPanel();

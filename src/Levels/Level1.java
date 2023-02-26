@@ -14,6 +14,8 @@ public class Level1 extends JPanel {
     private boolean levelComplete = false;
     private boolean levelFailed = false;
     private final int levelNumber = 1;
+    private final int screenWidth = 1757;
+    private final int screenHeight = 869;
 
     public JPanel createLevel1() {
         JPanel level1 = new JPanel();

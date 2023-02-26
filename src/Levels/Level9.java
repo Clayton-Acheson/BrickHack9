@@ -13,6 +13,8 @@ public class Level9 {
     private boolean levelComplete = false;
     private boolean levelFailed = false;
     private final int levelNumber = 9;
+    private final int screenWidth = 1757;
+    private final int screenHeight = 869;
 
     public JPanel createLevel9() {
         JPanel level9 = new JPanel();
