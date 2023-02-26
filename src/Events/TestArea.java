@@ -7,7 +7,7 @@ package Events;
   
  public class TestArea extends JLabel {
   
-     public TestArea(Color color, String text,) {
+     public TestArea(Color color, String text) {
          setBackground(color);
          setOpaque(true);
          setBorder(BorderFactory.createEmptyBorder());

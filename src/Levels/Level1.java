@@ -9,6 +9,7 @@ package Levels;
 import javax.swing.*;
 import java.awt.*;
 import Windows.Panel;
+import Events.TestArea;
 
 
 public class Level1 extends JPanel {
@@ -30,6 +31,32 @@ public class Level1 extends JPanel {
         level1.add(backgroundLabel, BorderLayout.CENTER);
         level1.add(new JLabel("Level 1: Basic Reaction"), BorderLayout.NORTH);
         return level1;
+    }
+    public JPanel Introduction(){
+        JPanel Intro = new JPanel();
+        Intro.setSize(screenWidth,screenHeight);
+        Intro.setLayout(new GridBagLayout());
+        Intro.setLayout(new GridLayout(4,1));
+
+        TestArea Title = new TestArea(new Color(142,184,212), "Level 1");
+        Title.setFont(new Font("Impact",Font.PLAIN, 30));
+        Title.setSize(screenWidth,(screenHeight/4));
+        Intro.add(Title);
+       
+        TestArea Desc = new TestArea(new Color(142,184,212), "Be careful when closing your tabs");
+        Desc.setFont(new Font("Impact",Font.PLAIN, 14));
+        Desc.setSize(screenWidth,(screenHeight/4));
+        Intro.add(Desc);
+        
+        TestArea Fill1 = new TestArea(new Color(142,184,212), " ");
+        Fill1.setSize(screenWidth,(screenHeight/4));
+        Intro.add(Fill1);
+
+        TestArea Fill2 = new TestArea(new Color(142,184,212), " ");
+        Fill2.setSize(screenWidth,(screenHeight/4));
+        Intro.add(Fill2);
+
+        return Intro;
     }
 
     public void levelComplete() {
