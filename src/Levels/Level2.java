@@ -22,9 +22,8 @@ public class Level2 {
 
     public Level2() {
         JPanel level2 = new JPanel();
-        level2.add(Intro);
+        level2.add(Intro, BorderLayout.CENTER);
         Intro.setOpaque(true);
-        Intro.setLocation(screenWidth/2,screenHeight);
         Intro.setVisible(true);
     }
 
@@ -34,12 +33,12 @@ public class Level2 {
         Intro.setLayout(new GridBagLayout());
         Intro.setLayout(new GridLayout(4,1));
 
-        TestArea Title = new TestArea(new Color(142,184,212), "                                                                Level 2");
+        TestArea Title = new TestArea(new Color(142,184,212), "Level 2");
         Title.setFont(new Font("Impact",Font.PLAIN, 60));
         Title.setSize(screenWidth,(screenHeight/4));
         Intro.add(Title);
        
-        TestArea Desc = new TestArea(new Color(142,184,212), "                                                   Be careful when closing your tabs");
+        TestArea Desc = new TestArea(new Color(142,184,212), "Be careful when closing your tabs");
         Desc.setFont(new Font("Impact",Font.PLAIN, 30));
         Desc.setSize(screenWidth,(screenHeight/4));
         Intro.add(Desc);
