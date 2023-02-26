@@ -23,6 +23,14 @@ public class Level1 extends JPanel {
         return level1;
     }
 
+    public void paint(Graphics g) {
+
+        Toolkit t=Toolkit.getDefaultToolkit();
+        Image i=t.getImage("p3.gif");
+        g.drawImage(i, 120,100,this);
+
+    }
+
     public void levelComplete() {
         levelComplete = true;
     }

@@ -4,6 +4,8 @@
  * @author @Clayton-Acheson
  */
 
+package Events;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 

@@ -5,9 +5,11 @@
  */
 
 package Levels;
+package events;
 
 import javax.swing.*;
 import java.awt.*;
+
 
 public class Level2 {
 
