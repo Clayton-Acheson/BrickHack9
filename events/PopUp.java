@@ -9,9 +9,11 @@ import javax.swing.border.Border;
 
 import java.awt.*;
 import javax.swing.event.MouseInputAdapter;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
-public class PopUp extends JFrame {
+public class PopUp extends JFrame implements ActionListener{
 
     private final MouseInputAdapter mouseInputAdapter = new MouseInputAdapter() {
         @Override
@@ -28,6 +30,22 @@ public class PopUp extends JFrame {
     private TestArea b1,b2, b3, b4;
     private TestArea t1,t2,t3;
     private TestArea m1,m2,m3,m4,m5;
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        String action = e.getActionCommand();
+        if(action.equals("ClosingTime")){
+            setVisible(false);
+        }
+        else if(action.equals("Option1")){
+            setVisible(false);
+            new PopUp("You can't get rid of me", "Shut Up!", "OK");
+        }
+        else if(action.equals("Option2")){
+            setVisible(false);
+            new PopUp ("Congrats! You're a Moron!", "ok", "ok");
+        }
+    }
     
 
     public JButton createClose(GridBagConstraints gbc){        //Create the Close Button
@@ -51,23 +69,13 @@ public class PopUp extends JFrame {
                 public void mousePressed(java.awt.event.MouseEvent evt) {}
                 public void mouseReleased(java.awt.event.MouseEvent evt) {}
             });
+
+            Close.addActionListener(this);
+            Close.setActionCommand("ClosingTime");
             Border emptyBorder = BorderFactory.createEmptyBorder();
             Close.setBorder(emptyBorder);
             Close.setSize(50,50);
         return Close;
-    }
-
-    public JButton CreateMsg(String warningmsg){
-        JButton Msg = new JButton(warningmsg);
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        Msg.setForeground(Color.BLACK);
-        Msg.setBackground(Tan);
-        Msg.setOpaque(true);
-        Msg.setSize(50,100);
-        Border emptyBorder = BorderFactory.createEmptyBorder();
-            Msg.setBorder(emptyBorder);
-        return Msg;
     }
 
     public JButton CreateOp1(String choice, GridBagConstraints gbc){
@@ -90,6 +98,8 @@ public class PopUp extends JFrame {
             public void mousePressed(java.awt.event.MouseEvent evt) {}
             public void mouseReleased(java.awt.event.MouseEvent evt) {}
         });
+        Op1.addActionListener(this);
+        Op1.setActionCommand("Option1");
         Op1.setSize(50,50);
         Border emptyBorder = BorderFactory.createEmptyBorder();
             Op1.setBorder(emptyBorder);
@@ -116,6 +126,9 @@ public class PopUp extends JFrame {
             public void mousePressed(java.awt.event.MouseEvent evt) {}
             public void mouseReleased(java.awt.event.MouseEvent evt) {}
         });
+        Op2.addActionListener(this);
+        Op2.setActionCommand("Option2");
+        Op2.setSize(50,50);
         Border emptyBorder = BorderFactory.createEmptyBorder();
         Op2.setBorder(emptyBorder);
         Op2.setSize(50,50);
@@ -127,6 +140,7 @@ public class PopUp extends JFrame {
 
     public PopUp (String warning, String optionA, String optionB){
         super("Error Testing");
+        setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(475,150);
         setLayout(new GridBagLayout());
