@@ -34,7 +34,7 @@ public class Level2 {
         Intro.setLayout(new GridLayout(4,1));
 
         TestArea Title = new TestArea(new Color(142,184,212), "Level 2");
-        Title.setFont(new Font("Impact",Font.PLAIN, 120));
+        Title.setFont(new Font("Impact",Font.PLAIN, 90));
         Title.setSize(screenWidth,(screenHeight/4));
         Intro.add(Title);
        
