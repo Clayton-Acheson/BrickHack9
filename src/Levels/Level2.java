@@ -36,7 +36,7 @@ public class Level2 {
         TestArea Title = new TestArea(new Color(142,184,212), "Level 2");
         Title.setFont(new Font("Impact",Font.PLAIN, 120));
         Title.setSize(screenWidth,(screenHeight/4));
-        Intro.add(Title);
+        Intro.add(Title, BorderLayout.CENTER);
        
         TestArea Desc = new TestArea(new Color(142,184,212), "Be careful when closing your tabs");
         Desc.setFont(new Font("Impact",Font.PLAIN, 45));
