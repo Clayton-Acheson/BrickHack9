@@ -18,19 +18,14 @@ public class Level2 {
     private final int levelNumber = 2;
     private final int screenWidth = 1757;
     private final int screenHeight = 869;
+    JPanel Intro = Introduction();
 
     public JPanel createLevel2() {
         JPanel level2 = new JPanel();
-        level2.add(new JLabel("Level 2: Basic Reaction"), BorderLayout.NORTH);
-        level2.add(new JLabel(""), BorderLayout.CENTER);
+        level2.add(Intro);
+        Intro.setOpaque(true);
+        Intro.setVisible(true);
         return level2;
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        String action = e.getActionCommand();
-        if(action.equals("ClosingTime")){
-        }
     }
 
     public JPanel Introduction(){
