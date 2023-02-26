@@ -16,27 +16,29 @@ public class Level9 extends JPanel{
     private final int levelNumber = 9;
     private final int screenWidth = 1757;
     private final int screenHeight = 869;
+    JPanel Intro = Introduction();
 
-    public JPanel createLevel9() {
-        JPanel level9 = new JPanel();
-        level9.add(new JLabel("Level 9: Basic Reaction"), BorderLayout.NORTH);
-        level9.setVisible(true);
-        return level9;
+    public Level9() {
+        JPanel Level9 = new JPanel();
+        Level9.add(Intro);
+        Intro.setOpaque(true);
+        Intro.setLocation(screenWidth/2,screenHeight);
+        Intro.setVisible(true);
     }
 
     public JPanel Introduction(){
         JPanel Intro = new JPanel();
         Intro.setSize(screenWidth,screenHeight);
         Intro.setLayout(new GridBagLayout());
-        Intro.setLayout(new GridLayout(4,1));
+        Intro.setLayout(new GridLayout(4,0));
 
-        TestArea Title = new TestArea(new Color(142,184,212), "Level 9");
-        Title.setFont(new Font("Impact",Font.PLAIN, 30));
-        Title.setSize(screenWidth,(screenHeight/4));
+        TestArea Title = new TestArea(new Color(142,184,212), "                                                                Level 9");
+        Title.setFont(new Font("Impact",Font.PLAIN, 60));
+        Title.setSize(screenWidth/2,(screenHeight/4));
         Intro.add(Title);
        
-        TestArea Desc = new TestArea(new Color(142,184,212), "Be careful when closing your tabs");
-        Desc.setFont(new Font("Impact",Font.PLAIN, 14));
+        TestArea Desc = new TestArea(new Color(142,184,212), "                                                   Be careful when closing your tabs");
+        Desc.setFont(new Font("Impact",Font.PLAIN, 52));
         Desc.setSize(screenWidth,(screenHeight/4));
         Intro.add(Desc);
         
