@@ -31,11 +31,11 @@ public class Level2 {
         JPanel Intro = new JPanel();
         Intro.setSize(screenWidth,screenHeight);
         Intro.setLayout(new GridBagLayout());
-        Intro.setLayout(new GridLayout(4,1));
+        Intro.setLayout(new GridLayout(4,0));
 
         TestArea Title = new TestArea(new Color(142,184,212), "Level 2");
         Title.setFont(new Font("Impact",Font.PLAIN, 90));
-        Title.setSize(screenWidth,(screenHeight/4));
+        Title.setSize(screenWidth/2,(screenHeight/4));
         Intro.add(Title);
        
         TestArea Desc = new TestArea(new Color(142,184,212), "Be careful when closing your tabs");
