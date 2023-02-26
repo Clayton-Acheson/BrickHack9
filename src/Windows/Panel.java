@@ -39,7 +39,7 @@ public class Panel extends JFrame {
 
         cardPanel.add(new TitleScreen());
         cardPanel.add(new Level1());
-        cardPanel.add(new Level2().Introduction());
+        cardPanel.add(new Level2());
         cardPanel.add(new Level3());
         cardPanel.add(new Level4());
         cardPanel.add(new Level5());
