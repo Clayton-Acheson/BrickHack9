@@ -37,14 +37,6 @@ public class PopUp extends JFrame implements ActionListener{
         if(action.equals("ClosingTime")){
             setVisible(false);
         }
-        else if(action.equals("Option1")){
-            setVisible(false);
-            new PopUp("You can't get rid of me", "Shut Up!", "OK");
-        }
-        else if(action.equals("Option2")){
-            setVisible(false);
-            new PopUp ("Congrats! You're a Moron!", "ok", "ok");
-        }
     }
     
 
