@@ -38,16 +38,16 @@ public class Panel extends JFrame {
         });
 
         cardPanel.add(new TitleScreen());
-        cardPanel.add(new Level1());
-        cardPanel.add(new Level2());
-        cardPanel.add(new Level3());
-        cardPanel.add(new Level4());
-        cardPanel.add(new Level5());
-        cardPanel.add(new Level6());
-        cardPanel.add(new Level7());
-        cardPanel.add(new Level8());
-        cardPanel.add(new Level9());
-        cardPanel.add(new Level10());
+        cardPanel.add(new Level1().Introduction());
+        cardPanel.add(new Level2().Introduction());
+        cardPanel.add(new Level3().Introduction());
+        cardPanel.add(new Level4().Introduction());
+        cardPanel.add(new Level5().Introduction());
+        cardPanel.add(new Level6().Introduction());
+        cardPanel.add(new Level7().Introduction());
+        cardPanel.add(new Level8().Introduction());
+        cardPanel.add(new Level9().Introduction());
+        cardPanel.add(new Level10().Introduction());
 
 
         titlePanel.add(GUI.createLabel(" Virus Fighter 19XX"), BorderLayout.CENTER);

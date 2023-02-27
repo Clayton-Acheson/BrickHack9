@@ -29,6 +29,8 @@ public class Level1 extends JPanel {
         Intro.setVisible(true);
     }
 
+    
+
     public JPanel Introduction(){
         JPanel Intro = new JPanel();
         Intro.setSize(screenWidth,screenHeight);

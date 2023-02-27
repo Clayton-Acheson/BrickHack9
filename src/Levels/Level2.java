@@ -9,9 +9,12 @@ package Levels;
 import javax.swing.*;
 import java.awt.*;
 import Events.TestArea;
+import Events.MouseClickEvent;
 
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-public class Level2 {
+public class Level2 extends JPanel implements MouseListener{
 
     private boolean levelComplete = false;
     private boolean levelFailed = false;
@@ -51,8 +54,15 @@ public class Level2 {
         TestArea Fill2 = new TestArea(new Color(142,184,212), " ");
         Fill2.setSize(screenWidth,(screenHeight/4));
         Intro.add(Fill2);
+        Intro.addMouseListener(this);
 
         return Intro;
+    }
+
+    public void mouseAction(MouseEvent e){
+        if (e.getSource() == Intro && Intro.isVisible() == true){
+            Intro.setVisible(false);
+        }
     }
 
     public void levelComplete() {
@@ -66,4 +76,25 @@ public class Level2 {
     public static void main(String[] args) {
         new Level2();
        }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+    }
 }

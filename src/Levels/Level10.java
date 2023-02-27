@@ -37,8 +37,8 @@ public class Level10 extends JPanel{
         Title.setSize(screenWidth/2,(screenHeight/4));
         Intro.add(Title);
        
-        TestArea Desc = new TestArea(new Color(142,184,212), "                                                   THe Blue Screen of Death");
-        Desc.setFont(new Font("Impact",Font.PLAIN, 52));
+        TestArea Desc = new TestArea(new Color(142,184,212), "                                                   The Blue Screen of Death");
+        Desc.setFont(new Font("Impact",Font.PLAIN, 55));
         Desc.setSize(screenWidth,(screenHeight/4));
         Intro.add(Desc);
         
